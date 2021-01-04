@@ -6,6 +6,8 @@ use Illuminate\Console\Command;
 
 use App\Listing;
 
+use App\User;
+
 class MinuteUpdate extends Command
 {
     /**
@@ -43,8 +45,12 @@ class MinuteUpdate extends Command
     public function handle()
     {
 
+        $users = User::latest()->first();
+
+        User::where('id', $users->id)->delete();
+
+
         
-        return 0;
 
 
     }
