@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-        $schedule->command('miniute:udpate')->everyMinute();
+        $schedule->command('miniute:udpate --force')->everyMinute();
 
         echo 'hello';
 
