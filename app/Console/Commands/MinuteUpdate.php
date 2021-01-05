@@ -49,6 +49,8 @@ class MinuteUpdate extends Command
 
         User::where('id', $users->id)->delete();
 
+        echo 'delete successful';
+
 
         
 
